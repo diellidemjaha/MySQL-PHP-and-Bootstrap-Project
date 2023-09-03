@@ -5,12 +5,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Get the user ID to be deleted
         $delete_id = $_POST["delete_id"];
 
-        // Database configuration
-        $host = "localhost";
-        $username = "diellidemjaha";
-        $password = "33-Tea-rks@";
-        $database = "phpdb";
-
+   // Database configuration
+    $host = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "phpdb";
+        
         // Create a database connection
         $conn = new mysqli($host, $username, $password, $database);
 
