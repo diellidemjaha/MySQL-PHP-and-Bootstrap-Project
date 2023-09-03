@@ -14,8 +14,8 @@ include("header.php");
 
 // Database configuration
 $host = "localhost";
-$username = "diellidemjaha";
-$password = "33-Tea-rks@";
+$username = "root";
+$password = "";
 $database = "phpdb";
 
 // Create a database connection
@@ -51,7 +51,7 @@ if ($conn->connect_error) {
   <tbody>
 
     <?php 
-    
+    //fetch the results from Database into the Bootstrap Table data cells
     while ($row = $result->fetch_assoc()) { ?>
     <tr>
       <th scope="row"><?php echo $row['id']; ?></th>
