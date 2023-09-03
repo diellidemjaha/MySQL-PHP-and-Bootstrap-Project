@@ -6,10 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nameAndLastName = $_POST["nameAndLastName"];
     $email = $_POST["email"];
 
-    // Database configuration
+   // Database configuration
     $host = "localhost";
-    $username = "diellidemjaha";
-    $password = "33-Tea-rks@";
+    $username = "root";
+    $password = "";
     $database = "phpdb";
 
     // Create a database connection
