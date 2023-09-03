@@ -5,8 +5,8 @@ ini_set('display_errors', 1);
 
 // Database configuration
 $host = "localhost";
-$username = "diellidemjaha";
-$password = "33-Tea-rks@";
+$username = "root";
+$password = "";
 $database = "phpdb";
 
 // Create a database connection
