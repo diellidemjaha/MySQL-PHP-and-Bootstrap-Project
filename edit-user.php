@@ -13,10 +13,10 @@
         if (isset($_GET['id'])) {
             $user_id = $_GET['id'];
 
-// Replace these lines with actual database queries to retrieve user data
+// Database configuration
 $host = "localhost";
-$username = "diellidemjaha";
-$password = "33-Tea-rks@";
+$username = "root";
+$password = "";
 $database = "phpdb";
 
 $conn = new mysqli($host, $username, $password, $database);
@@ -52,7 +52,7 @@ $conn->close();
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value="<?php echo $user_data['email']; ?>">
   </div>
-  <button type="submit" class="btn btn-primary m-5">Submit</button>
+  <button type="submit" class="btn btn-primary m-5">Update User</button>
 </form>
 
     </body>
