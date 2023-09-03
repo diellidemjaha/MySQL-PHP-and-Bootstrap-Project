@@ -3,8 +3,8 @@ header("Content-Type: application/json");
 
 // Database configuration
 $host = "localhost";
-$username = "diellidemjaha";
-$password = "33-Tea-rks@";
+$username = "root";
+$password = "";
 $database = "phpdb";
 
 // Create a database connection
