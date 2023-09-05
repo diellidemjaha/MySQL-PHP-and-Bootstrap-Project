@@ -58,6 +58,7 @@ if ($conn->connect_error) {
         <tr>
           <!-- <th scope="col">#id</th> -->
           <th scope="col">Name Lastname</th>
+          <th scope="col">Professional Field</th>
           <th scope="col">E-mail</th>
           <th scope="col">Edit user</th>
         </tr>
@@ -70,6 +71,7 @@ if ($conn->connect_error) {
         <tr>
           <!-- <th scope="row"></th> -->
           <td><a href="user_profile.php?id=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></td>
+          <td><?php echo $row['professional_field']; ?></td>
           <td><?php echo $row['email']; ?></td>
           <td><form action="edit-user-process.php" method="POST"><input type="hidden" name="_method" value="PUT"><input type="hidden" name="user_id" value="<?php echo $row['id'] ?>"><a href="http://localhost/php-api-frontend/edit-user.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Edit</a></form><form action="delete-user-process.php" method="POST"><input type="hidden" name="_method" value="DELETE"><input type="hidden" name="delete_id" value="<?php echo $row['id'] ?>"><button type="submit" class="btn btn-danger">Delete</div></form>
           </td>
