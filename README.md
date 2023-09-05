@@ -1,4 +1,5 @@
-Freelance Network Platform
+# Freelance Network Platform
+
 Welcome to the Freelance Network Platform repository! This project is designed to serve as a Freelance Network for a specific company, allowing them to efficiently manage and access information about the freelancers available to them. The application is built using MySQL, PHP, and Bootstrap 5, and it offers a range of features to streamline freelancer management.
 
 Overview
