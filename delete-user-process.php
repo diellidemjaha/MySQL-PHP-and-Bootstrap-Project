@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $host = "localhost";
     $username = "root";
     $password = "";
-    $database = "phpdb";
+    $database = "test-api-php";
         
         // Create a database connection
         $conn = new mysqli($host, $username, $password, $database);

@@ -17,7 +17,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "phpdb";
+$database = "test-api-php";
 
 $conn = new mysqli($host, $username, $password, $database);
 
@@ -40,20 +40,45 @@ if ($result->num_rows == 1) {
 $conn->close();
 }
 ?>
-       <h2 class="m-3">Edit User</h2>   
-       <form action="edit-user-process.php" method="POST">
+
+<div class="card w-75 mx-auto mt-5">
+  <div class="card-body">
+    <h5 class="card-title">Edit Freelancer</h5>
+    <p class="card-text">Edit the Freelancer in the form below.</p>  
+       <form action="edit-user-process.php" method="POST" enctype="multipart/form-data">
        <input type="hidden" name="_method" value="PUT">
+       <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
            <div class="mb-3 m-5">
-           <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-             <label for="exampleInputNameLastname1" class="form-label">Name Lastname</label>
+             <label for="exampleInputNameLastname1" class="form-label">Edit Name Lastname</label>
              <input type="text" class="form-control" id="exampleInputNameLastname1" name="name" value="<?php echo $user_data['name']; ?>">    
            </div>
-  <div class="mb-3 m-5">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value="<?php echo $user_data['email']; ?>">
-  </div>
-  <button type="submit" class="btn btn-primary m-5">Update User</button>
+           <div class="mb-3 m-5">
+             <label for="exampleInputNameLastname1" class="form-label">Edit Phone Number</label>
+             <input type="text" class="form-control" id="exampleInputNameLastname1" name="phone_number" value="<?php echo $user_data['phone_number']; ?>">    
+           </div>
+           <div class="mb-3 m-5">
+             <label for="exampleInputNameLastname1" class="form-label">Edit LinkedIn</label>
+             <input type="text" class="form-control" id="exampleInputNameLastname1" name="linkedin_link" value="<?php echo $user_data['linkedin_link']; ?>">    
+           </div>
+           <div class="mb-3 m-5">
+             <label for="exampleInputNameLastname1" class="form-label">Edit Professional Field</label>
+             <input type="text" class="form-control" id="exampleInputNameLastname1" name="professional_field" value="<?php echo $user_data['professional_field']; ?>">    
+           </div>
+           <div class="mb-3 m-5">
+             <label for="exampleInputNameLastname1" class="form-label">Edit Your Website</label>
+             <input type="text" class="form-control" id="exampleInputNameLastname1" name="website_link" value="<?php echo $user_data['website_link']; ?>">    
+           </div>
+          <div class="mb-3 m-5">
+            <label for="exampleInputEmail1" class="form-label">Edit Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value="<?php echo $user_data['email']; ?>">
+          </div>
+          <div class="mb-3 m-5">
+          <label for="customFile"" class="form-label">Edit Profile Picture</label>
+          <input type="file" class="form-control" id="customFile" name="profile_pic"> 
+          </div>
+  <button type="submit" class="btn btn-primary m-5">Update Freelancer</button>
 </form>
+  </div></div>
 
     </body>
 </html>

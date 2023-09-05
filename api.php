@@ -5,7 +5,7 @@ header("Content-Type: application/json");
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "phpdb";
+$database = "test-api-php";
 
 // Create a database connection
 $conn = new mysqli($host, $username, $password, $database);

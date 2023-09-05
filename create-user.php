@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+// Check if the user is authenticated
+if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] !== true) {
+    header("Location: login.php"); // Redirect to the login page if not authenticated
+    exit(); }
+  ?>
+
 <html>
     <head>
 
@@ -11,18 +21,43 @@
         include("header.php");
         ?>
        
-       <h2 class="m-3">Create User</h2>
-       <form action="create-user-process.php" method="POST">
+
+       <div class="card w-75 mx-auto mt-5">
+  <div class="card-body">
+    <h5 class="card-title">Create User</h5>
+    <p class="card-text">Create a User in the form below.</p>
+       <form action="create-user-process.php" method="POST" enctype="multipart/form-data">
            <div class="mb-3 m-5">
              <label for="exampleInputNameLastname1" class="form-label">Name Lastname</label>
              <input type="text" class="form-control" id="exampleInputNameLastname1" name="nameAndLastName" placeholder="Type Name and Lastname here...">    
            </div>
-  <div class="mb-3 m-5">
+           <div class="mb-3 m-5">
+             <label for="exampleInputNameLastname1" class="form-label">Phone Number</label>
+             <input type="text" class="form-control" id="InputPhoneNumber" name="phone_number" placeholder="Type Phone Number here...">    
+           </div>
+           <div class="mb-3 m-5">
+             <label for="exampleInputNameLastname1" class="form-label">LinkedIn</label>
+             <input type="text" class="form-control" id="InputLinkedInLink" name="linkedin_link" placeholder="https://www.linkedin.com/...">    
+           </div>
+           <div class="mb-3 m-5">
+             <label for="exampleInputNameLastname1" class="form-label">Professional Field</label>
+             <input type="text" class="form-control" id="InputLinkedInLink" name="professional_field" placeholder="Type your Expertise here...">    
+           </div>
+           <div class="mb-3 m-5">
+             <label for="exampleInputNameLastname1" class="form-label">Your Website</label>
+             <input type="text" class="form-control" id="InputLinkedInLink" name="website_link" placeholder="https://www...">    
+           </div>
+        <div class="mb-3 m-5">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Type E-mail here...">
-  </div>
-  <button type="submit" class="btn btn-primary m-5">Submit</button>
-</form>
+        </div>
+        <div class="mb-3 m-5">
+    <label for="customFile"" class="form-label">Profile Picture</label>
+    <input type="file" class="form-control" id="customFile" name="profile_pic"> 
+        </div>
+    <button type="submit" class="btn btn-primary m-5">Create User</button>
+        </form>
+  </div></div>
 
     </body>
 </html>
