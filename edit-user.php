@@ -76,7 +76,7 @@ $conn->close();
           <label for="customFile"" class="form-label">Edit Profile Picture</label>
           <input type="file" class="form-control" id="customFile" name="profile_pic"> 
           </div>
-  <button type="submit" class="btn btn-primary m-5">Update Freelancer</button>
+  <button type="submit" class="btn btn-primary m-5 float-end">Update Freelancer</button>
 </form>
   </div></div>
 

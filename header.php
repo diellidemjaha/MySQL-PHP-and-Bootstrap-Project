@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="http://localhost/php-api-frontend/">Users</a>
+          <a class="nav-link active" aria-current="page" href="http://localhost/php-api-frontend/">Freelancers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/php-api-frontend/create-user.php">Create User</a>
+          <a class="nav-link" href="http://localhost/php-api-frontend/create-user.php">Register a Freelancer</a>
         </li>
       </ul>
       <form class="d-flex" action="index.php" method="GET">

@@ -74,7 +74,11 @@ if ($conn->connect_error) {
           <td><form action="edit-user-process.php" method="POST"><input type="hidden" name="_method" value="PUT"><input type="hidden" name="user_id" value="<?php echo $row['id'] ?>"><a href="http://localhost/php-api-frontend/edit-user.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Edit</a></form><form action="delete-user-process.php" method="POST"><input type="hidden" name="_method" value="DELETE"><input type="hidden" name="delete_id" value="<?php echo $row['id'] ?>"><button type="submit" class="btn btn-danger">Delete</div></form>
           </td>
         </tr>
-        <?php }}?>
+        <?php }} else {
+          ?>
+        <tr><td><h4 class="m-4 p-2">No Freelancers found.</h4></td></tr>
+          <?php
+          }?>
       
       </tbody>
     </table>

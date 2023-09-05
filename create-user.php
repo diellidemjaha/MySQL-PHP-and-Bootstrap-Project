@@ -24,8 +24,8 @@ if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] !== true) {
 
        <div class="card w-75 mx-auto mt-5">
   <div class="card-body">
-    <h5 class="card-title">Create User</h5>
-    <p class="card-text">Create a User in the form below.</p>
+    <h5 class="card-title">Create a Freelancer</h5>
+    <p class="card-text">Create a Freelancer in the form below.</p>
        <form action="create-user-process.php" method="POST" enctype="multipart/form-data">
            <div class="mb-3 m-5">
              <label for="exampleInputNameLastname1" class="form-label">Name Lastname</label>
@@ -55,7 +55,7 @@ if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] !== true) {
     <label for="customFile"" class="form-label">Profile Picture</label>
     <input type="file" class="form-control" id="customFile" name="profile_pic"> 
         </div>
-    <button type="submit" class="btn btn-primary m-5">Create User</button>
+    <button type="submit" class="btn btn-primary m-5 float-end">Create Freelancer</button>
         </form>
   </div></div>
 

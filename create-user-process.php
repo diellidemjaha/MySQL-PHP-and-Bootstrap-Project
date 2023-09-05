@@ -1,5 +1,4 @@
 <?php
-include("create-user.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -64,8 +63,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $sql = "INSERT INTO users (name, email, linkedin_link, profile_pic_path, phone_number, professional_field, website_link) VALUES ('$nameAndLastName', '$email', '$linkedInLink', '$profilePicPath', '$phoneNumber', '$professionalField', '$websiteLink')";
 
     if ($conn->query($sql) === TRUE) {
+
+        echo "<div class=\"fixed-top\"><div class=\"alert alert-success\" role=\"alert\">
+    <b>Freelancer Created!</b>
+    </div></div>";
         // Redirect back to the index.php with a success message
         header("Location: index.php?success=true");
+        exit();
     } else {    
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
