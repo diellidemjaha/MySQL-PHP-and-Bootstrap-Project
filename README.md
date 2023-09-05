@@ -5,9 +5,11 @@ Welcome to the Freelance Network Platform repository! This project is designed t
 **Overview**
 This platform leverages the following technologies:
 
-MySQL: The database management system used to store freelancer information securely.
-PHP: The server-side scripting language responsible for processing user requests and interacting with the database.
-Bootstrap 5: The front-end framework that provides a responsive and user-friendly interface.
+**MySQL**: The database management system used to store freelancer information securely.
+
+**PHP**: The server-side scripting language responsible for processing user requests and interacting with the database.
+
+**Bootstrap 5**: The front-end framework that provides a responsive and user-friendly interface.
 
 **Features**
 
