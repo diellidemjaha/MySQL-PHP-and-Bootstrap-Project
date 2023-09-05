@@ -11,7 +11,7 @@ This platform leverages the following technologies:
 
 **Bootstrap 5**: The front-end framework that provides a responsive and user-friendly interface.
 
-**Features**
+__Features__
 
 **User Management**
 Create Freelancers: Easily add new freelancers to the platform with specific details, including personal and contact information.
