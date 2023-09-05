@@ -14,6 +14,7 @@ This platform leverages the following technologies:
 __Features__
 
 **User Management**
+
 Create Freelancers: Easily add new freelancers to the platform with specific details, including personal and contact information.
 
 Read Freelancer Information: Navigate through the list of freelancers on the index page and access detailed profiles.
