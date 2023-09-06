@@ -1,21 +1,8 @@
 <?php
 
+include("conection.php");
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
-// Database configuration
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "test-api-php";
-
-// Create a database connection
-$conn = new mysqli($host, $username, $password, $database);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
 
 
 if (isset($_GET['search'])) {
