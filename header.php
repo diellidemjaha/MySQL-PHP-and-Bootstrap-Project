@@ -14,7 +14,7 @@
         </li>
       </ul>
       <form class="d-flex" action="index.php" method="GET">
-        <input class="form-control me-2" type="search" value="<?php if(isset($_GET['search'])){echo $_GET['search'];} ?>" name="search" placeholder="Search">
+        <input id="searchInput" class="form-control me-2" type="search" value="<?php if(isset($_GET['search'])){echo $_GET['search'];} ?>" name="search" placeholder="Search">
         <button class="btn btn-outline-warning" type="submit">Search</button>
       </form>
       <a class="nav-link text-white p-2 m-1" href="logout.php">Logout</a>

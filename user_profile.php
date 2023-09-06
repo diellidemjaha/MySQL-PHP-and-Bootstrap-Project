@@ -17,7 +17,7 @@
         $sql = "SELECT * FROM users WHERE id = $user_id";
 
 
-        // Database configuration
+    // Database configuration
     $host = "localhost";
     $username = "root";
     $password = "";
