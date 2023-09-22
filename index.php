@@ -83,54 +83,6 @@ if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] !== true) {
 
       </div>
     </div>
-
-    <!-- <script>
-     
-      $(document).ready(function() {
-        
-        $('form').on('submit', function(event) {
-          event.preventDefault(); 
-
-          var searchValue = $('#searchInput').val().trim(); 
-
-        
-        //   $.ajax({
-        //     type: 'GET',
-        //     url: 'search.php', 
-        //     data: {
-        //       search: searchValue
-        //     },
-        //     success: function(results) {
-        //       console.log(results);
-        //       displayResults(results);
-        //     },
-        //     dataType: 'json'
-        //   });
-        // });
-
-       
-        function displayResults(results) {
-          var searchResults = $('#searchResults'); 
-          searchResults.empty(); 
-
-          if (results.length > 0) {
-            $.each(results, function(index, row) {
-              var tableRow = $('<tr>');
-              tableRow.append($('<td>').html('<a href="user_profile.php?id=' + row.id + '">' + row.name + '</a>'));
-              tableRow.append($('<td>').text(row.professional_field));
-              tableRow.append($('<td>').text(row.email));
-              tableRow.append($('<td>').html('<form action="edit-user-process.php" method="POST"><input type="hidden" name="_method" value="PUT"><input type="hidden" name="user_id" value="' + row.id + '"><a href="http://localhost/user-management-php/edit-user.php?id=' + row.id + '" class="btn btn-primary">Edit</a></form><form action="delete-user-process.php" method="POST"><input type="hidden" name="_method" value="DELETE"><input type="hidden" name="delete_id" value="' + row.id + '"><button type="submit" class="btn btn-danger">Delete</div></form>'));
-
-              searchResults.append(tableRow);
-              console.log(tableRow);
-            });
-          } else {
-            searchResults.html('<tr><td colspan="4"><h4 class="m-4 p-2">No Freelancers found.</h4></td></tr>');
-          }
-        }
-      });
-    </script> -->
-
 </body>
 
 </html>
