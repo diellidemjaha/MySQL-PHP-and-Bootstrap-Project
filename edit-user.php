@@ -17,7 +17,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "test-api-php";
+$database = "usermanagementdb";
 
 $conn = new mysqli($host, $username, $password, $database);
 
@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch user information from the database based on $user_id
-$sql = "SELECT * FROM users WHERE id = $user_id";
+$sql = "SELECT * FROM users WHERE user_id = $user_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 1) {

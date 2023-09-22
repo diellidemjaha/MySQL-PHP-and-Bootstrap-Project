@@ -13,7 +13,7 @@
           <a class="nav-link" href="create-user.php">Register a Freelancer</a>
         </li>
       </ul>
-      <form class="d-flex" action="index.php" method="GET">
+      <form class="d-flex" action="search.php" method="GET">
         <input id="searchInput" class="form-control me-2" type="search" value="<?php if(isset($_GET['search'])){echo $_GET['search'];} ?>" name="search" placeholder="Search">
         <button class="btn btn-outline-warning" type="submit">Search</button>
       </form>

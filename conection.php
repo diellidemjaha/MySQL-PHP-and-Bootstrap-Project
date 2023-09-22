@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "test-api-php";
+$database = "usermanagementdb";
 
 // Create a database connection
 $conn = new mysqli($host, $username, $password, $database);

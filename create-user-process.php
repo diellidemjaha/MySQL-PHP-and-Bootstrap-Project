@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $host = "localhost";
     $username = "root";
     $password = "";
-    $database = "test-api-php";
+    $database = "usermanagementdb";
     
     try {
         // Create a PDO connection
@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Prepare the SQL statement with placeholders
         $sql = "INSERT INTO users (name, email, linkedin_link, profile_pic_path, phone_number, professional_field, website_link) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
+
         
         // Bind parameters to the placeholders
         $stmt->bindParam(1, $nameAndLastName);

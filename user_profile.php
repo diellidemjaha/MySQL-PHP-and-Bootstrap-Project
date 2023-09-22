@@ -14,10 +14,10 @@ include("conection.php");
     <?php
     include("header.php");
     
-    if (isset($_GET['id'])) {
-        $user_id = $_GET['id'];
+    if (isset($_GET['user_id'])) {
+        $user_id = $_GET['user_id'];
 
-        $sql = "SELECT * FROM users WHERE id = $user_id";
+        $sql = "SELECT * FROM users WHERE user_id = $user_id";
 
         $result = $conn->query($sql);
     

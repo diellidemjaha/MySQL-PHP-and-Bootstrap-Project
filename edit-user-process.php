@@ -29,13 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $host = "localhost";
                 $username = "root";
                 $password = "";
-                $database = "test-api-php";
+                $database = "usermanagementdb";
                 
                 try {
                     $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
                     
                     // Prepare the SQL statement with placeholders
-                    $sql = "UPDATE users SET name=?, phone_number=?, linkedin_link=?, professional_field=?, website_link=?, profile_pic_path=?, email=? WHERE id=?";
+                    $sql = "UPDATE users SET name=?, phone_number=?, linkedin_link=?, professional_field=?, website_link=?, profile_pic_path=?, email=? WHERE user_id=?";
                     $stmt = $pdo->prepare($sql);
                     
                     // Bind parameters to the placeholders
