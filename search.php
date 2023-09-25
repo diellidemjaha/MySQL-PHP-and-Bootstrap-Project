@@ -20,7 +20,7 @@ ini_set('display_errors', 1);
 
 if (isset($_GET['search'])) {
     $filtersearchdata = $_GET['search'];
-    $sql = "SELECT * FROM users WHERE CONCAT(name, email) LIKE '%$filtersearchdata%'";
+    $sql = "SELECT * FROM users WHERE CONCAT(name, email, professional_field) LIKE '%$filtersearchdata%'";
 
     $result = $conn->query($sql);
 

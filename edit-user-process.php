@@ -25,6 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             
             if (move_uploaded_file($tempName, $filePath)) {
                 $profilePicPath = $filePath;
+
+            } else {
+                echo "Error uploading profile picture.";
+                exit;
+            }
+        } else {
+            // If no file was uploaded, retain the existing profile pic path
+            $profilePicPath = ''; // You can modify this based on your database schema 
+        }
                 
                 $host = "localhost";
                 $username = "root";
@@ -66,6 +75,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 echo "Error uploading profile picture.";
             }
         }
-    }
-}
 ?>

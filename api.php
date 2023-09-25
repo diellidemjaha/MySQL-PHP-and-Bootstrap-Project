@@ -36,11 +36,15 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 // Handle PUT request to update a user by ID
 if ($_SERVER["REQUEST_METHOD"] === "PUT") {
     $data = json_decode(file_get_contents("php://input"), true);
-    $id = $data["id"];
+    $id = $data["user_id"];
     $name = $data["name"];
     $email = $data["email"];
+    $phoneNumber = $_POST["phone_number"];
+    $linkedInLink = $_POST["linkedin_link"];
+    $professionalField = $_POST["professional_field"];
+    $websiteLink = $_POST["website_link"];
     
-    $sql = "UPDATE users SET name='$name', email='$email' WHERE id=$id";
+    $sql = "UPDATE users SET name='$name', email='$email', phone_number='$phoneNumber', linkedin_link='$linkedInLink', professional_field='$professionalField', website_link='$websiteLink' WHERE user_id=$id";
     
     if ($conn->query($sql) === TRUE) {
         echo json_encode(["message" => "User updated successfully"]);
