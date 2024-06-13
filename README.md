@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# MySQL-PHP-and-Bootstrap-Project
-Software Engineer Dielli Demjaha based on Prishtina, Kosovo
+## MySQL-PHP-and-Bootstrap-Project
 =======
 ### Freelance Network Platform
 
